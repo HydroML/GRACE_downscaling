@@ -77,6 +77,9 @@ for(t in 1:ncol(timedata)){
   print(t)
 }
 
+GRACE_ALL$geom<-paste("POLYGON ((", GRACE_ALL$min_lon, GRACE_ALL$min_lat, ",", GRACE_ALL$min_lon, GRACE_ALL$max_lat, ",", GRACE_ALL$max_lon, GRACE_ALL$max_lat, ",", GRACE_ALL$max_lon, GRACE_ALL$min_lat, ",", GRACE_ALL$min_lon, GRACE_ALL$min_lat,"))")
+GRACE_ALL$date<-paste0(GRACE_ALL$year,"-",GRACE_ALL$month,"-",15)
+
 write.csv(GRACE_ALL,paste0("C:/Users/joeja/Desktop/research_postdoc/GRACE_DOWNSCALE/DATA/GRACE_JPL_all.csv"),row.names = F)
 
 
@@ -156,6 +159,9 @@ for(i in 1:length(filez)){
 
 }
 
+GRACE_ALL$geom<-paste("POLYGON ((", GRACE_ALL$min_lon, GRACE_ALL$min_lat, ",", GRACE_ALL$min_lon, GRACE_ALL$max_lat, ",", GRACE_ALL$max_lon, GRACE_ALL$max_lat, ",", GRACE_ALL$max_lon, GRACE_ALL$min_lat, ",", GRACE_ALL$min_lon, GRACE_ALL$min_lat,"))")
+GRACE_ALL$date<-paste0(GRACE_ALL$year,"-",GRACE_ALL$month,"-",15)
+
 write.csv(GRACE_ALL,paste0("C:/Users/joeja/Desktop/research_postdoc/GRACE_DOWNSCALE/DATA/GRACE_CSR_all.csv"),row.names = F)
 
 
@@ -231,6 +237,10 @@ for(i in 1:length(filez)){
   print(i)
   
 }
+
+
+GRACE_ALL$geom<-paste("POLYGON ((", GRACE_ALL$min_lon, GRACE_ALL$min_lat, ",", GRACE_ALL$min_lon, GRACE_ALL$max_lat, ",", GRACE_ALL$max_lon, GRACE_ALL$max_lat, ",", GRACE_ALL$max_lon, GRACE_ALL$min_lat, ",", GRACE_ALL$min_lon, GRACE_ALL$min_lat,"))")
+GRACE_ALL$date<-paste0(GRACE_ALL$year,"-",GRACE_ALL$month,"-",15)
 
 write.csv(GRACE_ALL,paste0("C:/Users/joeja/Desktop/research_postdoc/GRACE_DOWNSCALE/DATA/GRACE_GFZ_all.csv"),row.names = F)
 
